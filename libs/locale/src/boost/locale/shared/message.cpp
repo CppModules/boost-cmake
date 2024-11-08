@@ -20,11 +20,11 @@
 
 #include <boost/locale/encoding.hpp>
 #include <boost/locale/message.hpp>
-#include "boost/locale/shared/message.hpp"
-#include "boost/locale/shared/mo_hash.hpp"
-#include "boost/locale/shared/mo_lambda.hpp"
-#include "boost/locale/util/encoding.hpp"
-#include "boost/locale/util/foreach_char.hpp"
+#include "../shared/message.hpp"
+#include "../shared/mo_hash.hpp"
+#include "../shared/mo_lambda.hpp"
+#include "../util/encoding.hpp"
+#include "../util/foreach_char.hpp"
 #include <boost/assert.hpp>
 #include <boost/utility/string_view.hpp>
 #include <cstdio>

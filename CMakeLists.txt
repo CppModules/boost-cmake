@@ -193,56 +193,55 @@ if(WIN32 OR CYGWIN)
 endif()
 
 set(BOOST_LOCALE_SRC
-    libs/locale/src/encoding/codepage.cpp
-    libs/locale/src/shared/date_time.cpp
-    libs/locale/src/shared/generator.cpp
-    libs/locale/src/shared/message.cpp
-    libs/locale/src/shared/format.cpp
-    libs/locale/src/shared/ids.cpp
-    libs/locale/src/shared/mo_lambda.cpp
-    libs/locale/src/shared/formatting.cpp
-    libs/locale/src/shared/localization_backend.cpp
-    libs/locale/src/std/collate.cpp
-    libs/locale/src/std/numeric.cpp
-    libs/locale/src/std/all_generator.hpp
-    libs/locale/src/std/codecvt.cpp
-    libs/locale/src/std/std_backend.cpp
-    libs/locale/src/std/std_backend.hpp
-    libs/locale/src/std/converter.cpp
-    libs/locale/src/util/locale_data.cpp
-    libs/locale/src/util/default_locale.cpp
-    libs/locale/src/util/locale_data.hpp
-    libs/locale/src/util/numeric.hpp
-    libs/locale/src/util/info.cpp
-    libs/locale/src/util/codecvt_converter.cpp
-    libs/locale/src/util/timezone.hpp
-    libs/locale/src/util/gregorian.hpp
-    libs/locale/src/util/gregorian.cpp
-    libs/locale/src/util/iconv.hpp
+    libs/locale/src/boost/locale/encoding/codepage.cpp
+    libs/locale/src/boost/locale/shared/date_time.cpp
+    libs/locale/src/boost/locale/shared/generator.cpp
+    libs/locale/src/boost/locale/shared/message.cpp
+    libs/locale/src/boost/locale/shared/format.cpp
+    libs/locale/src/boost/locale/shared/ids.cpp
+    libs/locale/src/boost/locale/shared/mo_lambda.cpp
+    libs/locale/src/boost/locale/shared/formatting.cpp
+    libs/locale/src/boost/locale/shared/localization_backend.cpp
+    libs/locale/src/boost/locale/std/collate.cpp
+    libs/locale/src/boost/locale/std/numeric.cpp
+    libs/locale/src/boost/locale/std/all_generator.hpp
+    libs/locale/src/boost/locale/std/codecvt.cpp
+    libs/locale/src/boost/locale/std/std_backend.cpp
+    libs/locale/src/boost/locale/std/std_backend.hpp
+    libs/locale/src/boost/locale/std/converter.cpp
+    libs/locale/src/boost/locale/util/locale_data.cpp
+    libs/locale/src/boost/locale/util/default_locale.cpp
+    libs/locale/src/boost/locale/util/numeric.hpp
+    libs/locale/src/boost/locale/util/info.cpp
+    libs/locale/src/boost/locale/util/codecvt_converter.cpp
+    libs/locale/src/boost/locale/util/timezone.hpp
+    libs/locale/src/boost/locale/util/gregorian.hpp
+    libs/locale/src/boost/locale/util/gregorian.cpp
+    libs/locale/src/boost/locale/util/iconv.hpp
 )
 
 if (WIN32)
   list(APPEND BOOST_LOCALE_SRC
-      libs/locale/src/win32/collate.cpp
-      libs/locale/src/win32/lcid.cpp
-      libs/locale/src/win32/win_backend.cpp
-      libs/locale/src/win32/numeric.cpp
-      libs/locale/src/win32/win_backend.hpp
-      libs/locale/src/win32/api.hpp
-      libs/locale/src/win32/all_generator.hpp
-      libs/locale/src/win32/converter.cpp
-      libs/locale/src/win32/lcid.hpp
+      libs/locale/src/boost/locale/win32/collate.cpp
+      libs/locale/src/boost/locale/win32/lcid.cpp
+      libs/locale/src/boost/locale/win32/win_backend.cpp
+      libs/locale/src/boost/locale/win32/numeric.cpp
+      libs/locale/src/boost/locale/win32/win_backend.hpp
+      libs/locale/src/boost/locale/win32/api.hpp
+      libs/locale/src/boost/locale/win32/all_generator.hpp
+      libs/locale/src/boost/locale/win32/converter.cpp
+      libs/locale/src/boost/locale/win32/lcid.hpp
   )
 else()
   list(APPEND BOOST_LOCALE_SRC
-      libs/locale/src/posix/collate.cpp
-      libs/locale/src/posix/numeric.cpp
-      libs/locale/src/posix/posix_backend.cpp
-      libs/locale/src/posix/posix_backend.hpp
-      libs/locale/src/posix/all_generator.hpp
-      libs/locale/src/posix/codecvt.cpp
-      libs/locale/src/posix/converter.cpp
-      libs/locale/src/posix/codecvt.hpp
+      libs/locale/src/boost/locale/posix/collate.cpp
+      libs/locale/src/boost/locale/posix/numeric.cpp
+      libs/locale/src/boost/locale/posix/posix_backend.cpp
+      libs/locale/src/boost/locale/posix/posix_backend.hpp
+      libs/locale/src/boost/locale/posix/all_generator.hpp
+      libs/locale/src/boost/locale/posix/codecvt.cpp
+      libs/locale/src/boost/locale/posix/converter.cpp
+      libs/locale/src/boost/locale/posix/codecvt.hpp
   )
 endif()
 
@@ -679,7 +678,7 @@ if(WIN32)
   target_compile_definitions(boost_header INTERFACE -DBOOST_USE_WINAPI_VERSION=0x0601)
   if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "Clang")
     target_compile_definitions(boost_header INTERFACE -DBOOST_SP_USE_STD_ATOMIC -DBOOST_USE_WINDOWS_H)
-    set_property(SOURCE libs/locale/src/shared/message.cpp APPEND PROPERTY CMAKE_CXX_FLAGS "-O0")
+    set_property(SOURCE libs/locale/src/boost/locale/shared/message.cpp APPEND PROPERTY CMAKE_CXX_FLAGS "-O0")
   endif()
   target_compile_definitions(boost_context_static PUBLIC -DBOOST_USE_WINFIB)
 else()

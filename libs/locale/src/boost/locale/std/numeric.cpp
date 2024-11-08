@@ -14,8 +14,8 @@
 #include <sstream>
 #include <string>
 
-#include "boost/locale/std/all_generator.hpp"
-#include "boost/locale/util/numeric.hpp"
+#include "../std/all_generator.hpp"
+#include "../util/numeric.hpp"
 
 namespace boost { namespace locale { namespace impl_std {
     /// Forwarding time_put facet

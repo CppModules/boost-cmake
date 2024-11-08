@@ -6,7 +6,7 @@
 // https://www.boost.org/LICENSE_1_0.txt
 
 #include <boost/locale/encoding.hpp>
-#include "boost/locale/util/make_std_unique.hpp"
+#include "../util/make_std_unique.hpp"
 
 #if BOOST_LOCALE_USE_WIN32_API
 #    define BOOST_LOCALE_WITH_WCONV
@@ -18,7 +18,7 @@
 #    include "boost/locale/encoding/uconv_converter.hpp"
 #endif
 #ifdef BOOST_LOCALE_WITH_WCONV
-#    include "boost/locale/encoding/wconv_converter.hpp"
+#    include "./wconv_converter.hpp"
 #endif
 
 namespace boost { namespace locale { namespace conv {

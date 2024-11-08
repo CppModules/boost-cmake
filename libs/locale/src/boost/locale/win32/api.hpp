@@ -15,7 +15,7 @@
 #include <string>
 #include <vector>
 
-#include "boost/locale/win32/lcid.hpp"
+#include "../win32/lcid.hpp"
 
 #ifndef NOMINMAX
 #    define NOMINMAX
