@@ -8,8 +8,8 @@
 #define BOOST_LOCALE_IMPL_ICONV_CODEPAGE_HPP
 
 #include <boost/locale/encoding.hpp>
-#include "boost/locale/util/encoding.hpp"
-#include "boost/locale/util/iconv.hpp"
+#include "locale/src/boost/locale/util/encoding.hpp"
+#include "locale/src/boost/locale/util/iconv.hpp"
 #include <boost/assert.hpp>
 #include <cerrno>
 #include <string>

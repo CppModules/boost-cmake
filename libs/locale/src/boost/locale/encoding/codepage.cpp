@@ -12,7 +12,7 @@
 #    define BOOST_LOCALE_WITH_WCONV
 #endif
 #ifdef BOOST_LOCALE_WITH_ICONV
-#    include "boost/locale/encoding/iconv_converter.hpp"
+#    include "locale/src/boost/locale/encoding/iconv_converter.hpp"
 #endif
 #ifdef BOOST_LOCALE_WITH_ICU
 #    include "boost/locale/encoding/uconv_converter.hpp"

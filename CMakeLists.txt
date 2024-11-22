@@ -21,6 +21,8 @@ if(WIN32)
   set(BOOST_ATOMIC_SRC ${BOOST_ATOMIC_SRC} libs/atomic/src/wait_on_address.cpp)
 endif()
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/libs)
+
 set(BOOST_SERIALIZATION_SRC
     libs/serialization/src/archive_exception.cpp
     libs/serialization/src/basic_archive.cpp
@@ -241,7 +243,7 @@ else()
       libs/locale/src/boost/locale/posix/all_generator.hpp
       libs/locale/src/boost/locale/posix/codecvt.cpp
       libs/locale/src/boost/locale/posix/converter.cpp
-      libs/locale/src/boost/locale/posix/codecvt.hpp
+#      libs/locale/src/boost/locale/posix/codecvt.hpp
   )
 endif()
 

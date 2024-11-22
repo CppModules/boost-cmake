@@ -27,8 +27,8 @@
 #include <vector>
 #include <wctype.h>
 
-#include "boost/locale/posix/all_generator.hpp"
-#include "boost/locale/util/numeric.hpp"
+#include "locale/src/boost/locale/posix/all_generator.hpp"
+#include "locale/src/boost/locale/util/numeric.hpp"
 
 namespace boost { namespace locale { namespace impl_posix {
 

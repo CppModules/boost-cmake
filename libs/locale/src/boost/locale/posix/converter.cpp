@@ -7,7 +7,7 @@
 #include <boost/locale/conversion.hpp>
 #include <boost/locale/encoding.hpp>
 #include <boost/locale/generator.hpp>
-#include "boost/locale/util/encoding.hpp"
+#include "locale/src/boost/locale/util/encoding.hpp"
 #include <cctype>
 #include <cstring>
 #include <langinfo.h>
@@ -18,7 +18,7 @@
 #    include <xlocale.h>
 #endif
 
-#include "boost/locale/posix/all_generator.hpp"
+#include "locale/src/boost/locale/posix/all_generator.hpp"
 
 namespace boost { namespace locale { namespace impl_posix {
 

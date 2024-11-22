@@ -17,8 +17,8 @@
 #include <vector>
 #include <wchar.h>
 
-#include "boost/locale/posix/all_generator.hpp"
-#include "boost/locale/shared/mo_hash.hpp"
+#include "locale/src/boost/locale/posix/all_generator.hpp"
+#include "locale/src/boost/locale/shared/mo_hash.hpp"
 
 namespace boost { namespace locale { namespace impl_posix {
 
