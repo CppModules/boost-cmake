@@ -236,13 +236,22 @@ if (WIN32)
   )
 else()
   list(APPEND BOOST_LOCALE_SRC
-      libs/locale/src/boost/locale/posix/collate.cpp
-      libs/locale/src/boost/locale/posix/numeric.cpp
-      libs/locale/src/boost/locale/posix/posix_backend.cpp
-      libs/locale/src/boost/locale/posix/posix_backend.hpp
-      libs/locale/src/boost/locale/posix/all_generator.hpp
-      libs/locale/src/boost/locale/posix/codecvt.cpp
-      libs/locale/src/boost/locale/posix/converter.cpp
+      libs/locale/src/boost/locale/std/collate.cpp
+      libs/locale/src/boost/locale/std/numeric.cpp
+      libs/locale/src/boost/locale/std/std_backend.cpp
+      libs/locale/src/boost/locale/std/std_backend.hpp
+      libs/locale/src/boost/locale/std/all_generator.hpp
+      libs/locale/src/boost/locale/std/codecvt.cpp
+      libs/locale/src/boost/locale/std/converter.cpp
+
+#      libs/locale/src/boost/locale/posix/collate.cpp
+#      libs/locale/src/boost/locale/posix/numeric.cpp
+#      libs/locale/src/boost/locale/posix/posix_backend.cpp
+#      libs/locale/src/boost/locale/posix/posix_backend.hpp
+#      libs/locale/src/boost/locale/posix/all_generator.hpp
+#      libs/locale/src/boost/locale/posix/codecvt.cpp
+#      libs/locale/src/boost/locale/posix/converter.cpp
+
 #      libs/locale/src/boost/locale/posix/codecvt.hpp
   )
 endif()
